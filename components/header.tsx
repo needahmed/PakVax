@@ -5,12 +5,15 @@ import { Button } from "@/components/ui/button"
 import { Globe, ChevronDown, Menu, X } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import { useLanguage } from "@/components/language-provider"
 
 export function Header() {
-  const { language, toggleLanguage } = useLanguage()
+  const [language, setLanguage] = useState<"en" | "ur">("en")
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+
+  const toggleLanguage = () => {
+    setLanguage((prev) => (prev === "en" ? "ur" : "en"))
+  }
 
   const navItems = [
     {
@@ -19,7 +22,7 @@ export function Header() {
         { label: language === "en" ? "Why Vaccinate" : "ویکسین کیوں", href: "#why" },
         { label: language === "en" ? "How Vaccines Work" : "ویکسین کیسے کام کرتی ہے", href: "#how-work" },
         { label: language === "en" ? "Vaccine Safety" : "ویکسین کی حفاظت", href: "#safety" },
-        { label: language === "en" ? "Side Effects" : "ضمنی اثرات", href: "#side-effects" },
+ 
       ],
     },
     {
@@ -100,11 +103,12 @@ export function Header() {
             </Button>
           </div>
         </div>
+      </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:block border-t border-border bg-muted/50">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <ul className="flex items-center justify-center gap-1 py-2">
+      {/* Desktop Navigation */}
+      <nav className="hidden md:block border-t border-border w-full bg-muted/50">
+        <div className="container mx-auto px-4">
+          <ul className="flex items-center justify-center gap-1 py-2 w-full">
               {navItems.map((item, index) => (
                 <li
                   key={index}
@@ -148,11 +152,12 @@ export function Header() {
               ))}
             </ul>
           </div>
-        </nav>
+      </nav>
 
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <nav className="md:hidden border-t border-border py-4 animate-in slide-in-from-top duration-300">
+      {/* Mobile Navigation */}
+      {mobileMenuOpen && (
+        <nav className="md:hidden border-t border-border py-4 animate-in slide-in-from-top duration-300">
+          <div className="container mx-auto px-4">
             <div className="space-y-4">
               {navItems.map((item, index) => (
                 <div key={index}>
@@ -205,9 +210,9 @@ export function Header() {
                 {language === "en" ? "اردو" : "English"}
               </Button>
             </div>
-          </nav>
-        )}
-      </div>
+          </div>
+        </nav>
+      )}
     </header>
   )
 }

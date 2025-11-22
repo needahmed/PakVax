@@ -1,7 +1,6 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { MessageCircle } from "lucide-react"
+import Image from "next/image"
 import { useLanguage } from "@/components/language-provider"
 
 export function WhatsAppButton() {
@@ -25,13 +24,21 @@ export function WhatsAppButton() {
   }
 
   return (
-    <Button
+    <button
       onClick={handleWhatsAppClick}
-      size="lg"
-      className="fixed bottom-8 right-8 w-16 h-16 md:w-20 md:h-20 rounded-full shadow-2xl bg-accent hover:bg-accent/90 text-accent-foreground z-50 hover:scale-110 transition-transform"
+      className="fixed bottom-8 right-8 w-16 h-16 md:w-20 md:h-20 rounded-full shadow-2xl z-50 hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
       aria-label={ariaLabels[language]}
     >
-      <MessageCircle className="w-8 h-8 md:w-10 md:h-10" />
-    </Button>
+      <Image
+        src="/images/contactWhatsapp.png"
+        alt={ariaLabels[language]}
+        width={80}
+        height={80}
+        className="w-full h-full object-contain rounded-full"
+      />
+    </button>
   )
 }
+
+
+

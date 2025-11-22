@@ -2,6 +2,7 @@
 node_modules/
 /.pnp
 .pnp.js
+.yarn/install-state.gz
 
 # Testing
 /coverage
@@ -43,4 +44,5 @@ next-env.d.ts
 # OS
 .DS_Store
 Thumbs.db
+
 
