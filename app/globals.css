@@ -140,4 +140,58 @@
     font-feature-settings: "kern" 1, "liga" 1;
     text-rendering: optimizeLegibility;
   }
+  
+  /* Prevent text overlap in RTL mode - Better line height and spacing */
+  html[dir="rtl"] h1,
+  html[dir="rtl"] h2,
+  html[dir="rtl"] h3,
+  html[dir="rtl"] h4,
+  html[dir="rtl"] h5,
+  html[dir="rtl"] h6 {
+    line-height: 1.7 !important;
+    word-spacing: 0.05em;
+    letter-spacing: 0.01em;
+    padding-inline: 0.15em;
+  }
+  
+  html[dir="rtl"] p,
+  html[dir="rtl"] span,
+  html[dir="rtl"] div {
+    line-height: 1.9 !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* Better spacing for Urdu text in buttons */
+  html[dir="rtl"] button {
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.6;
+    min-height: auto;
+  }
+  
+  /* Ensure proper spacing in containers for Urdu text */
+  html[dir="rtl"] .container {
+    padding-inline: clamp(1rem, 4vw, 2rem);
+  }
+  
+  /* Better spacing for cards and content blocks in RTL */
+  html[dir="rtl"] [class*="card"],
+  html[dir="rtl"] [class*="Card"] {
+    padding-inline: 1.5em;
+  }
+  
+  /* Improve readability for Urdu lists */
+  html[dir="rtl"] ul,
+  html[dir="rtl"] ol {
+    line-height: 1.9;
+  }
+  
+  /* Ensure text doesn't overflow in navigation items */
+  html[dir="rtl"] nav a,
+  html[dir="rtl"] nav button {
+    white-space: normal;
+    word-wrap: break-word;
+    padding-inline: 0.75em;
+  }
 }

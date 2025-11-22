@@ -5,15 +5,12 @@ import { Button } from "@/components/ui/button"
 import { Globe, ChevronDown, Menu, X } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { useLanguage } from "@/components/language-provider"
 
 export function Header() {
-  const [language, setLanguage] = useState<"en" | "ur">("en")
+  const { language, toggleLanguage } = useLanguage()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
-
-  const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "en" ? "ur" : "en"))
-  }
 
   const navItems = [
     {
