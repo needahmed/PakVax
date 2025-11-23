@@ -19,23 +19,18 @@ export const metadata: Metadata = {
   title: "Pak Vax - Vaccination for Pakistan",
   description:
     "Learn about childhood vaccination schedules, benefits, and protect your children from preventable diseases. Information available in English and Urdu.",
-  generator: "v0.app",
+  generator: "Pak Vax",
   icons: {
     icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
       {
         url: "/icon.svg",
         type: "image/svg+xml",
       },
+      {
+        url: "/favicon.svg",
+        type: "image/svg+xml",
+      },
     ],
-    apple: "/apple-icon.png",
   },
 }
 

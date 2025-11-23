@@ -25,7 +25,7 @@ export function WhyVaccinate() {
           title: "Community Protection",
           description:
             "When enough people are vaccinated, it protects those who cannot be vaccinated, creating herd immunity.",
-          stat: "70%+",
+          stat: "80-95%",
           statLabel: "Coverage Needed",
         },
         {

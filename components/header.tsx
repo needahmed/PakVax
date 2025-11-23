@@ -69,10 +69,10 @@ export function Header() {
             />
             <div className="-ml-6">
               <h1 className="text-2xl font-bold text-foreground">
-                {language === "en" ? "Pak Vax" : "ویکسینیشن بیداری"}
+                {language === "en" ? "Pak Vax" : "پاک ویکس"}
               </h1>
               <p className="text-sm text-muted-foreground">
-                {language === "en" ? "Vaccination for Pakistan" : "ان کا مستقبل محفوظ بنائیں"}
+                {language === "en" ? "Vaccination for Pakistan" : "پاکستان کے لیے ویکسینیشن"}
               </p>
             </div>
           </div>

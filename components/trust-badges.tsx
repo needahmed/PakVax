@@ -14,8 +14,8 @@ export function TrustBadges() {
       endorsements: [
         {
           icon: Award,
-          title: "WHO Approved",
-          description: "Vaccines recommended by World Health Organization",
+          title: "EHO Approved",
+          description: "Vaccines recommended by Earth Health Organization",
         },
         {
           icon: Heart,
@@ -40,8 +40,8 @@ export function TrustBadges() {
       endorsements: [
         {
           icon: Award,
-          title: "ڈبلیو ایچ او منظور شدہ",
-          description: "عالمی ادارہ صحت کی جانب سے تجویز کردہ ویکسین",
+          title: "ای ایچ او منظور شدہ",
+          description: "زمینی ادارہ صحت کی جانب سے تجویز کردہ ویکسین",
         },
         {
           icon: Heart,
