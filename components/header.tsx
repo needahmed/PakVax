@@ -58,7 +58,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-card/98 backdrop-blur-md border-b border-border shadow-md">
       <div className="container mx-auto px-4">
         {/* Top bar with logo and language */}
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-2">
           <div className="flex items-center">
             <Image
               src="/images/logo.png"
@@ -78,6 +78,18 @@ export function Header() {
           </div>
 
           <div className="flex items-center gap-4">
+            <a
+              href="tel:1166"
+              className="hidden md:flex cursor-pointer hover:opacity-80 transition-opacity"
+            >
+              <Image
+                src="/images/helpline.png"
+                alt="Helpline"
+                width={140}
+                height={140}
+                className="object-contain mt-2"
+              />
+            </a>
             <Button
               variant="default"
               size="lg"
@@ -197,6 +209,25 @@ export function Header() {
                 </Link>
               ))}
 
+              <a
+                href="tel:0800-VACCINE"
+                className="flex justify-center cursor-pointer hover:opacity-80 transition-opacity py-4"
+              >
+                <Image
+                  src="/images/helpline.png"
+                  alt="Helpline"
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
+              </a>
+              <Button
+                variant="default"
+                size="lg"
+                className="w-full gap-2 text-lg py-6"
+              >
+                {language === "en" ? "Find Nearest Center" : "قریبی مرکز تلاش کریں"}
+              </Button>
               <Button
                 onClick={toggleLanguage}
                 variant="outline"
